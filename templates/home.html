@@ -44,6 +44,44 @@
 	<![endif]-->
 
 	</head>
+	<style>
+	nav {
+		max-width: 97.5vw;
+		display: flex;
+		background-color: #151B1F;
+		padding: 20px;
+		border-radius: 15px;
+		justify-content: center;
+		align-items: center;
+		margin: 10px 0;
+		margin-left: 10px;
+	
+	}
+	
+	.nav-item {
+		color: #A7A397;
+		text-decoration: none;
+		padding: 0 25px;
+		font-weight: 600;
+	}
+	
+	.nav-item:hover {
+		color: #00F9B8;
+		transition: 0.5s;
+	}
+	
+	@media screen and (max-width:600px) {
+		nav {
+			flex-direction: column;
+			margin: 80px 0;
+		}
+	
+		.nav-item {
+			padding: 20px 30px;
+		}
+	
+	}
+	</style>
 	<body>
 		
 	<div class="colorlib-loader"></div>
@@ -57,14 +95,12 @@
 							<div id="colorlib-logo"><a href="/">FAKENEWS</a></div>
 						</div>
 						<div class="col-md-10 text-right menu-1">
-							<ul>
-								<li class="active"><a href="/">Home</a></li>
-								<li><a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset">Dataset</a></li>
-								<li><a href="https://github.com/GitTeaching/Fake-News-Detector-App/blob/master/Fake%20News%20Prediction.ipynb">NoteBook</a></li>
-								<li><a href="https://github.com/GitTeaching/Fake-News-Detector-App">Code Source</a></li>
-								<li class="btn-cta"><a href="#">Sign Up</a></li>
-								<li class="btn-cta"><a href="#">Login</a></li>
-							</ul>
+							<nav>
+	<a href="#" class="nav-item">Home</a>
+	<a href="https://github.com/Arunprasath0501/FAKENEWSDETECTION/blob/main/fact_checker.csv" class="nav-item">Dataset</a>
+	<a href="https://colab.research.google.com/drive/1xXMogU4j_6xG5anC0Z6WS2VIA4I4oS4V#scrollTo=SNKzhKf5pvvo" class="nav-item">NoteBook</a>
+	<a href="https://github.com/Arunprasath0501/FAKENEWSDETECTION" class="nav-item">Code Source</a>
+</nav>
 						</div>
 					</div>
 				</div>
