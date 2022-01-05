@@ -15,7 +15,7 @@ def home():
     form = OriginalTextForm()
 
     if form.generate.data:
-        data = pd.read_csv("random_dataset.csv")
+        data = pd.read_csv("fact_checker.csv")
         index = randrange(0, len(data)-1, 1)
         original_text = data.loc[index].text
         form.original_text.data = str(original_text)
@@ -38,7 +38,7 @@ def predict(original_text):
 
 @app.route('/random', methods=['GET'])
 def random():
-    data = pd.read_csv("random_dataset.csv")
+    data = pd.read_csv("fact_checker.csv")
     index = randrange(0, len(data)-1, 1)
     return jsonify({'title': data.loc[index].title, 'text': data.loc[index].text, 'label': str(data.loc[index].label)})
 
